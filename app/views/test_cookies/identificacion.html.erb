@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+  <body>
+
+
+		<div id="main-content2">
+
+		<article>
+			<header>
+				<h2> Test Cookies  </h2>
+				<p> <%= link_to "(Volver a Bienvenida)", :controller => "test_sesiones", :action => "bienvenida" %> </p>
+			</header>
+
+
+<% if @nombre %>
+   <h2> Bienvenido/a <%= @nombre %> </h2>
+   <%= form_tag({:controller => "test_cookies", :action => "identificacion"}, :method => "post") do %>
+      <%= submit_tag "Quiero borrar mi identidad." %>
+   <% end %>
+<% else %>
+   <h2> Bienvenido/a anónimo </h2>
+   <p> Disculpe, pero uste aun no se ha identificado, por favor ingrese su nombre. </p>
+   <%= form_tag({:controller => "test_cookies", :action => "identificacion"}, :method => "post") do %>
+      <%= text_field "nombre", "", :required => "required" %>
+      <%= submit_tag "Identificarse." %>
+   <% end %>
+<% end; %>
+</div>
+
+</article>
+
+</div>
+
+</body>
+</html>

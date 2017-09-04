@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+  <body>
+
+
+		<div id="main-content2">
+
+		<article>
+			<header>
+				<p> <%= link_to "(Volver a Bienvenida)", :controller => "test_sesiones", :action => "bienvenida" %> </p>
+			</header>
+
+
+<h2> Por favor ingrese el código del usuario </h2>
+
+<%= form_tag({:controller => "formularios", :action => "por_get"}, :method => "get") do %>
+   <%= label_tag "código", "Código de usuario" %>
+   <%= text_field_tag "codigo", "", :size => 5, :maxlenght => 5, :placeholder => "Código", :required => "required" %>
+   <br />
+   <%= submit_tag "Enviar" %>
+<% end %>
+<div id="resultados">
+   <% if @codigo %>
+      <% if @usuario %>
+         <p> <%= @usuario[:nombre] %> <%= @usuario[:apellido] %> </p>
+      <% else %>
+         <p> El usuario con el código <%= @codigo %> no ha podido ser encontrado. </p>
+      <% end %>
+   <% end %>
+</div>
+</div>
+
+</article>
+
+</div>
+
+</body>
+</html>

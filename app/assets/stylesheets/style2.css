@@ -1,0 +1,16 @@
+
+#main-content {
+	
+position: absolute;
+ width: 400px;
+ height: 400px;
+ left: 250px;
+ top: 20px;
+	
+	background: white;
+	background-image: url("assets/logueo_1.png");
+	display: table;
+	text-align: center;
+	top: -20px;
+	
+}

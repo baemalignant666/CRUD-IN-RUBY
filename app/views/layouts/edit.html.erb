@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+  <body>
+
+
+		<div id="main-content2">
+
+		<article>
+			<header>
+				<h2> Modificar tarea </h2>
+				<p> <%= link_to "(Volver a Bienvenida)", :controller => "test_sesiones", :action => "bienvenida" %> </p>
+			</header>
+
+<%= form_for @tarea do |f| %>
+   <p>
+      <%= f.label :titulo, "Título" %>
+      <br />
+      <%= f.text_field :titulo, {:value => @titulo} %>
+   </p>
+   <p>
+      <%= f.label :descripcion, "Descripción" %>
+      <br />
+      <%= f.text_area :descripcion, {:value => @descripcion} %>
+   </p>
+   <p>
+      <%= f.label :prioridad, "Prioridad" %>
+      <br />
+      <%= f.text_field :prioridad, {:value => @prioridad, :size => "1", :maxlength => 1} %>
+   </p>
+   <p>
+      <%= f.submit "Enviar" %> <%= link_to "Cancelar", tareas_path %>
+   </p>
+<% end %>
+</div>
+
+</article>
+
+</div>
+
+</body>
+</html>

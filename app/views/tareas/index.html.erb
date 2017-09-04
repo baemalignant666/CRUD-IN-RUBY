@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+  <body>
+
+
+		<div id="main-content2">
+
+		<article>
+			<header>
+				<h2> Lista de tareas </h2>
+				<p> <%= link_to "(Volver a Bienvenida)", :controller => "test_sesiones", :action => "bienvenida" %> </p>
+			</header>
+
+
+<ul>
+   <% @tarea.each do |t| %>
+   <li>
+      <h3> <%= t.titulo %> </h3>
+      <p>
+    <%= link_to "Ver", t %>
+    |
+    <%= link_to "Editar", edit_tarea_path(t) %>
+    |
+    <%= link_to "Eliminar", {:action => "delete", :id => t} %>
+    |
+    <%= link_to "Finalizar", {:action => "finalizar", :id => t} %>
+      </p>
+
+
+   </li>
+   <% end %>
+</ul>
+<p> <%= link_to "Crear nueva tarea", new_tarea_path %> </p>
+
+</div>
+
+</article>
+
+</div>
+
+</body>
+</html>

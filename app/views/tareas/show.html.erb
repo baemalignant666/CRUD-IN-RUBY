@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+  <body>
+
+
+		<div id="main-content2">
+
+		<article>
+			<header>
+				<h2> <%= @tarea.titulo %> </h2>
+				<p> <%= link_to "(Volver a Bienvenida)", :controller => "test_sesiones", :action => "bienvenida" %> </p>
+			</header>
+
+
+
+
+<div>
+   <%= simple_format @tarea.descripcion %>
+</div>
+<p> <%= link_to "Volver", tareas_path %> </p>
+
+</div>
+
+</article>
+
+</div>
+
+</body>
+</html>

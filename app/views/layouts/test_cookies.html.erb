@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Cabecera fija</title>
+         <link rel="stylesheet" href="/assets/style2.css">
+</head>
+
+<body>
+
+	<header id="main-header">
+
+		<a id="logo-header" href="#">
+			<span class="site-name">Bienvenido/a <%="#{@nombre} #{@apellido}"%></span>
+			<span class="site-desc">PROG-V / Viernes 6:30-9:30 pm / LAB 212</span>
+		</a>
+
+		<nav>
+			<ul>
+        <li class="google_mas"> <%= link_to "Google +", :controller => "redes_sociales", :action => "google_mas" %> </li>
+				<li class="facebook"> <%= link_to "Facebook", :controller => "redes_sociales", :action => "facebook" %> </li>
+			  <li class="twitter"> <%= link_to "Twitter", :controller => "redes_sociales", :action => "twitter" %> </li>
+				<li class="Formularios"> <%= link_to "Formularios", :controller => "formularios", :action => "por_get" %> </li>
+				<li class="Archivos"> <%= link_to "Archivos", :controller => "archivos", :action => "subir_archivos" %> </li>
+				<li class="Tareas"> <%= link_to "Tareas", :controller => "tareas", :action => "index" %> </li>
+        <li class="Test_cookies"> <%= link_to "Identificacion", :controller => "test_cookies", :action => "identificacion" %> </li>
+			</ul>
+		</nav>
+
+	</header>
+
+ 		<%= yield %>
+
+	<footer id="main-footer">
+		<p>&copy; 2017 <a href="https://www.uhispanoamericana.ac.cr">Universidad Hispanoamericana</a></p>
+        <p> <%= link_to "Cerrar sesión", :controller => "test_sesiones", :action => "cerrar_sesion" %> </p>
+	</footer>
+
+	</body>
+</html>

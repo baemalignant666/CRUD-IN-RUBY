@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Cabecera fija</title>
+    <link rel="stylesheet" href="/assets/style.css">
+
+</head>
+  <body>
+    <header id="main-header">
+
+		<a id="logo-header" href="#">
+			<span class="site-name">Bienvenido/a <%="#{@nombre} #{@apellido}"%></span>
+			<span class="site-desc">PROG-V / Viernes 6:30-9:30 pm / LAB 212</span>
+		</a>
+
+		<nav>
+			<ul>
+				<li class="facebook"> <%= link_to "Facebook", :controller => "redes_sociales", :action => "facebook" %> </li>
+			</ul>
+		</nav>
+
+	</header>
+
+		<div id="main-content2">
+
+		<article>
+			<header>
+
+				<h1>GOOGLE +</h1>
+				<p> <%= link_to "(Volver a Bienvenida)", :controller => "test_sesiones", :action => "bienvenida" %> </p>
+			</header>
+
+			<img src="/assets/google_mas_logo-300x300.jpg" />
+
+			<div class="content">
+
+              <p> Google+ (pronunciado y a veces escrito Google Plus, a veces abreviado como G+, en
+			  algunos países de lengua hispana pronunciado Google Más) es un servicio de red social
+			  operado por Google Inc. El servicio, lanzado el 28 de junio de 2011, está basado en
+			  HTML5. Los usuarios tienen que ser mayores de 18 años de edad,2 para crear sus propias
+			  cuentas. Google+ ya es la segunda red social más popular del mundo con aproximadamente
+			  343 millones de usuarios activos. </p>
+
+              <p> Google+ integra los servicios sociales, tales como Google Perfiles y Google Buzz, e
+			  introduce los nuevos servicios: Círculos, Quedadas, Intereses y Mensajes.3 Google+
+			  también estará disponible como una aplicación de escritorio y como una aplicación móvil,
+			  pero sólo en los sistemas operativos Android e iOS. Fuentes tales como The New York
+			  Times lo han declarado el mayor intento de Google para competir con la red social
+			  Facebook,4 la cual tenía más de 750 millones de usuarios en 2011.5 El 20 de septiembre
+			  de 2011, Google permitió la creación de cuentas a usuarios con más de 18 años, con
+			  mejoras en sus extensiones de videoconferencias.</p>
+
+			  <p> Extraído de: <%= link_to "Wikipedia", "http://es.wikipedia.org/wiki/Facebook",
+			  :target => "_blank" %> </p>
+              <p> <%= link_to "(Volver a Bienvenida)", :controller => "test_sesiones", :action =>
+			  "bienvenida" %> </p>
+
+			</div>
+
+		</article>
+
+	    </div>
+
+</body>
+</html>
